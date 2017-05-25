@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 800px;
+            height: 600px;
+            background-color: #cccccc;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .box {
+            width: 200px;
+            background-color: #83ffde;
+        }
+        
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+/*            transition: all 1s;*/
+            transition: width 1s, height 1s 1s, background-color 1s 2s;}
+        
+        .box1:hover {
+/*            background-color: blue;*/
+            width: 400px;
+            height: 400px;
+            background-color: green;
+        }
+        
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            position: absolute;
+            
+            transform: rotate(15deg);
+/*            transform: scale(1, 5);*/
+/*            transform: translate(100px, 300px);*/
+/*            transform: skewX(20deg);*/
+/*            transform: skewY(20deg);*/
+/*            transform: matrix()*/
+        }
+        
+        .box3 {
+            width: 300px;
+            height: 300px;
+            background-color: magenta;
+            transition: all 1s;
+/*
+            position: absolute;
+            top: 1000px;
+*/
+            margin-top: 200px;
+            margin-bottom: 100px;
+        }
+        
+        .box3:hover {
+             width: 300px;
+            height: 300px;
+            background-color: magenta;
+            transform: perspective(800px)rotateX(45deg)
+        }
+        
+        .container2 {
+            width: 200px;
+        height: 200px;
+        position: relative;
+        perspective: 800px;
+        margin-left: 20%;
+        margin-top: 20%}
+        
+        .cube {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+            transform: rotateX(15deg)rotateY(15deg);
+        }
+        
+        .cube div {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: .5;
+        }
+
+        .front {background-color: red;
+        transform:translateZ(100px);
+        }
+        
+        .back {background-color: blue;
+        transform:rotateX(180deg)translateZ(100px);
+        }
+
+        .left {background-color: green;
+        transform:rotateY(-90deg)translateZ(100px);
+        }
+        
+        .right {background-color: yellow;
+        transform:rotateY(90deg)translateZ(100px);
+        }
+
+        .top {background-color: orange;
+        transform:rotateX(90deg)translateZ(100px);
+        }
+        
+        .bottom {background-color: purple;
+        transform:rotateX(-90deg)translateZ(100px);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione esse omnis, cupiditate soluta inventore accusantium, enim quaerat nesciunt laboriosam, hicesse omnis, cupiditate soluta inventore accusantium, enim quaerat nesciunt laboriosam, hicesse omnis, cupiditate soluta inventore accusantium, enim quaerat nesciunt laboriosam, hic incidunt, dignissimos cum eum quae odit vel tempore facere laudantium.</p>
+        </div>
+        <div class="box">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione esse omnis, cupiditate soluta inventore accusantium, enim quaerat netetur adipisicing elit. Ratione esse omnis, cupiditate soluta inventore accusantium, enim quaerat nesciunt laboriosam, hic incidunt, dignissimos cum eum quae odit vel tempore facere laudantium.</p>
+        </div>
+        <div class="box">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione esse omnis, cupiditate soluta inventore accusantium, enim quaerat nesciunt laboriosam, hic incidunt, dignissimos cum eum quae odit vel tempore facere laudantium.</p>
+        </div>
+        
+    </div>
+    <div class="box1"> </div>
+    <div class="box2"> </div>
+    <div class="box3"> </div>
+    <div class="container2">
+        <div class="cube">
+            <div class="front">Front</div>
+            <div class="back">Back</div>
+            <div class="left">Left</div>
+            <div class="right">Right</div>
+            <div class="top"></div>
+            <div class="bottom"></div>
+            
+        </div>
+    </div>
+</body>
+</html>
